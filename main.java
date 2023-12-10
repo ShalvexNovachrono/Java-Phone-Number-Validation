@@ -10,7 +10,6 @@ public class Main {
      */
     public static void main(String[] args) {
         Scanner myObj = new Scanner(System.in);
-        boolean NotPhoneNumber = false;
         int count = 0;
         Outer:
         while (true) {
@@ -25,12 +24,11 @@ public class Main {
                     if (icv >= 48 && icv <= 57) {
                         count++;
                     } else {
-                        NotPhoneNumber = true;
                         System.out.println("Make sure its a phone number.");
                         break Inner;
                     }
                 }  
-                if (count >= 10) {
+                if (count == 11) {
                     System.out.println("Access granted.");
                     break Outer;
                 }
