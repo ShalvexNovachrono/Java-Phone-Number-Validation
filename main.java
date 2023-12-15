@@ -10,13 +10,13 @@ public class Main {
      */
     public static void main(String[] args) {
         Scanner myObj = new Scanner(System.in);
-        int count = 0;
         Outer:
         while (true) {
             System.out.print("Phone Number:\n>>> ");
             String myInputVal = myObj.nextLine();
             if (myInputVal.length() == 11) {
                 char[] myInputValChar = myInputVal.toCharArray();
+                int count = 0;
                 Inner:
                 for (int i = 0; i < myInputVal.length(); i++ ) { 
                     char character = myInputValChar[i];
